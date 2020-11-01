@@ -75,7 +75,9 @@ namespace Academy.Areas.Admin.Controllers
             {
                 FullName=register.FullName,
                 UserName=register.UserName,
-                Email=register.Email
+                Email=register.Email,
+                IsActivated=true
+
             };
             IdentityResult identityResult = await _userManager.CreateAsync(newUser, register.Password);
             if (!identityResult.Succeeded)
@@ -86,8 +88,8 @@ namespace Academy.Areas.Admin.Controllers
                 }
                 return View(register); 
             }
-            await _signInManager.SignInAsync(newUser, true);
-            await _userManager.AddToRoleAsync(newUser, "Admin");
+            //await _signInManager.SignInAsync(newUser, true);
+            await _userManager.AddToRoleAsync(newUser, "Member");
             return RedirectToAction("Index", "Home");
         }
 
