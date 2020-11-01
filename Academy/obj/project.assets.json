@@ -8790,11 +8790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Docs\\Academy\\Academy\\Academy.csproj",
+      "projectUniqueName": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Academy\\Academy\\Academy.csproj",
       "projectName": "Academy",
-      "projectPath": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Docs\\Academy\\Academy\\Academy.csproj",
+      "projectPath": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Academy\\Academy\\Academy.csproj",
       "packagesPath": "C:\\Users\\Hasan Hasanbayli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Docs\\Academy\\Academy\\obj\\",
+      "outputPath": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Academy\\Academy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hasan Hasanbayli\\AppData\\Roaming\\NuGet\\NuGet.Config",

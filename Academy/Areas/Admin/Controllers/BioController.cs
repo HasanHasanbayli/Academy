@@ -29,58 +29,6 @@ namespace Academy.Areas.Admin.Controllers
             return View(_db.Bios.FirstOrDefault());
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Bio bio)
-        {
-            if (!ModelState.IsValid) return View();
-            if (ModelState["HeaderPhoto"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid ||
-                  ModelState["FooterPhoto"].ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
-            {
-                return View();
-            }
-            if (!bio.HeaderPhoto.IsImage())
-            {
-                ModelState.AddModelError("HeaderPhoto", "Zehmet olmasa shekil formati sechin");
-                return View();
-            }
-            if (!bio.FooterPhoto.IsImage())
-            {
-                ModelState.AddModelError("FooterPhoto", "Zehmet olmasa shekil formati sechin");
-                return View();
-            }
-            if (bio.HeaderPhoto.MaxLength(1000))
-            {
-                ModelState.AddModelError("HeaderPhoto", "Shekilin olchusu max 1000kb ola biler");
-                return View();
-            }
-            if (bio.FooterPhoto.MaxLength(1000))
-            {
-                ModelState.AddModelError("FooterPhoto", "Shekilin olchusu max 1000kb ola biler");
-                return View();
-            }
-            string path = Path.Combine("images", "logo");
-            string headerPhoto = await bio.HeaderPhoto.SaveImg(_env.WebRootPath, path);
-            string footerPhoto = await bio.FooterPhoto.SaveImg(_env.WebRootPath, path);
-            Bio newBio = new Bio();
-            newBio.HeaderLogo = headerPhoto;
-            newBio.FooterLogo = footerPhoto;
-            newBio.About = bio.About;
-            newBio.Call = bio.Call;
-            newBio.Facebook = bio.Facebook;
-            newBio.Twitter = bio.Twitter;
-            newBio.Linkedin = bio.Linkedin;
-            newBio.Location = bio.Location;
-            newBio.Email = bio.Email;
-            await _db.Bios.AddAsync(newBio);
-            await _db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
         public IActionResult Update(int? id)
         {
             if (id == null) return NotFound();
@@ -123,9 +71,11 @@ namespace Academy.Areas.Admin.Controllers
                     return View();
                 }
                 string path = Path.Combine("images", "logo");
-                Helper.DeleteImage(_env.WebRootPath, path, dbBio.HeaderLogo);
-                Helper.DeleteImage(_env.WebRootPath, path, dbBio.FooterLogo);
-
+                if (path!=null)
+                {
+                    Helper.DeleteImage(_env.WebRootPath, path, dbBio.HeaderLogo);
+                    Helper.DeleteImage(_env.WebRootPath, path, dbBio.FooterLogo);
+                }
                 string headerPhoto = await bio.HeaderPhoto.SaveImg(_env.WebRootPath, path);
                 string footerPhoto = await bio.FooterPhoto.SaveImg(_env.WebRootPath, path);
                 dbBio.HeaderLogo = headerPhoto;

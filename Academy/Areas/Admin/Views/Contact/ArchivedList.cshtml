@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Apply>
+﻿@model IEnumerable<Contact>
 @{
     ViewData["Title"] = "ArchivedList";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Apply</h4>
-                <a asp-controller="Apply" asp-action="Index" class="btn btn-success mt-3">Index</a>
+                <a asp-controller="Contact" asp-action="Index" class="btn btn-success mt-3">Index</a>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered">
                         <thead>
@@ -31,26 +31,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (Apply apply in Model)
+                            @foreach (Contact contact in Model)
                             {
                                 <tr>
                                     <td>
-                                        @apply.FirstName
+                                        @contact.FirstName
                                     </td>
                                     <td>
-                                        @apply.LastName
+                                        @contact.LastName
                                     </td>
                                     <td>
-                                        @apply.EmailAddress
+                                        @contact.EmailAddress
                                     </td>
                                     <td>
-                                        @apply.TelNumber
+                                        @contact.TelNumber
                                     </td>
                                     <td>
-                                        @apply.Message
+                                        @contact.Message
                                     </td>
                                     <td>
-                                        <a asp-action="Restore" asp-route-id="@apply.Id" class="btn btn-primary">
+                                        <a asp-action="Restore" asp-route-id="@contact.Id" class="btn btn-primary">
                                             <i class="mdi mdi-cloud-sync"></i>
                                             Restore
                                         </a>

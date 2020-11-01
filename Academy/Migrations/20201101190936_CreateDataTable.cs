@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Academy.Migrations
 {
-    public partial class CreateDatabaseTable : Migration
+    public partial class CreateDataTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,24 +40,6 @@ namespace Academy.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Admissions", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Applies",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(nullable: false),
-                    LastName = table.Column<string>(nullable: false),
-                    EmailAddress = table.Column<string>(nullable: false),
-                    TelNumber = table.Column<string>(maxLength: 15, nullable: false),
-                    Message = table.Column<string>(maxLength: 200, nullable: false),
-                    IsArchived = table.Column<bool>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Applies", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -123,6 +105,24 @@ namespace Academy.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Contacts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
+                    EmailAddress = table.Column<string>(nullable: false),
+                    TelNumber = table.Column<string>(maxLength: 15, nullable: false),
+                    Message = table.Column<string>(maxLength: 200, nullable: false),
+                    IsArchived = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Contacts", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Details",
                 columns: table => new
                 {
@@ -152,6 +152,20 @@ namespace Academy.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_News", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sliders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Image = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sliders", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -392,9 +406,6 @@ namespace Academy.Migrations
                 name: "Admissions");
 
             migrationBuilder.DropTable(
-                name: "Applies");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -413,6 +424,9 @@ namespace Academy.Migrations
                 name: "Bios");
 
             migrationBuilder.DropTable(
+                name: "Contacts");
+
+            migrationBuilder.DropTable(
                 name: "Courses");
 
             migrationBuilder.DropTable(
@@ -420,6 +434,9 @@ namespace Academy.Migrations
 
             migrationBuilder.DropTable(
                 name: "News");
+
+            migrationBuilder.DropTable(
+                name: "Sliders");
 
             migrationBuilder.DropTable(
                 name: "Testimonials");

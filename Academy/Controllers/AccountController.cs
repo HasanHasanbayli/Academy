@@ -89,7 +89,7 @@ namespace Academy.Areas.Admin.Controllers
                 return View(register); 
             }
             //await _signInManager.SignInAsync(newUser, true);
-            await _userManager.AddToRoleAsync(newUser, "Member");
+            await _userManager.AddToRoleAsync(newUser, "Admin");
             return RedirectToAction("Index", "Home");
         }
 

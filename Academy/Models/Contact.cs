@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Academy.Models
 {
-    public class Apply
+    public class Contact
     {
         public int Id { get; set; }
         [Required]

@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20201017104844_CreateSliderTable.cs" />
+    <Compile Remove="Migrations\20201017104844_CreateSliderTable.Designer.cs" />
     <Compile Remove="Migrations\20201018202616_CreateBioTable.cs" />
     <Compile Remove="Migrations\20201018202616_CreateBioTable.Designer.cs" />
     <Compile Remove="Migrations\20201019162238_CreateBioTable.cs" />
@@ -66,6 +68,16 @@
     <Compile Remove="Migrations\20201029184243_AddIsActivatedColumnToAppUser.Designer.cs" />
     <Compile Remove="Migrations\20201030110202_UserTables.cs" />
     <Compile Remove="Migrations\20201030110202_UserTables.Designer.cs" />
+    <Compile Remove="Migrations\20201101110848_CreateDatabaseTable.cs" />
+    <Compile Remove="Migrations\20201101110848_CreateDatabaseTable.Designer.cs" />
+    <Compile Remove="Migrations\20201101181509_AddDataTable.cs" />
+    <Compile Remove="Migrations\20201101181509_AddDataTable.Designer.cs" />
+    <Compile Remove="Migrations\20201101181700_AddContactTable.cs" />
+    <Compile Remove="Migrations\20201101181700_AddContactTable.Designer.cs" />
+    <Compile Remove="Migrations\20201101181941_AddContactTable.cs" />
+    <Compile Remove="Migrations\20201101181941_AddContactTable.Designer.cs" />
+    <Compile Remove="Migrations\20201101190721_CreateDataTable.cs" />
+    <Compile Remove="Migrations\20201101190721_CreateDataTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

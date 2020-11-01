@@ -18,11 +18,11 @@ namespace Academy.DAL
         public DbSet<Courses> Courses { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<News> News{ get; set; }
-        public DbSet<Apply> Applies { get; set; }
         public DbSet<Testimonials> Testimonials { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Videos> Videos { get; set; }
         public DbSet<Admissions> Admissions { get; set; }
         public DbSet<Detail> Details { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

@@ -21,17 +21,17 @@ namespace Academy.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Apply apply)
+        public async Task<IActionResult> Create(Contact contact)
         {
             if (!ModelState.IsValid) return View();
-            Apply newApply = new Apply();
-            newApply.FirstName = apply.FirstName;
-            newApply.LastName = apply.LastName;
-            newApply.EmailAddress = apply.EmailAddress;
-            newApply.TelNumber = apply.TelNumber;
-            newApply.EmailAddress = apply.EmailAddress;
-            newApply.Message = apply.Message;
-            await _db.Applies.AddAsync(newApply);
+            Contact newContact= new Contact();
+            newContact.FirstName = contact.FirstName;
+            newContact.LastName = contact.LastName;
+            newContact.EmailAddress = contact.EmailAddress;
+            newContact.TelNumber = contact.TelNumber;
+            newContact.EmailAddress = contact.EmailAddress;
+            newContact.Message = contact.Message;
+            await _db.Contacts.AddAsync(newContact);
             await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Thanks));
         }
