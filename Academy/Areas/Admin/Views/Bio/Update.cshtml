@@ -1,0 +1,56 @@
+﻿@model Bio
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Bio</h4>
+            <form class="forms-sample" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label asp-for="Call"></label>
+                    <input class="form-control" asp-for="Call" placeholder="Input Call">
+                    <span asp-validation-for="Call" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input class="form-control" asp-for="Email" placeholder="Input Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="About"></label>
+                    <input class="form-control" asp-for="About" placeholder="Input Email">
+                    <span asp-validation-for="About" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Facebook"></label>
+                    <input class="form-control" asp-for="Facebook" placeholder="Input Facebook">
+                    <span asp-validation-for="Facebook" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Twitter"></label>
+                    <input class="form-control" asp-for="Twitter" placeholder="Input Twitter">
+                    <span asp-validation-for="Twitter" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Linkedin"></label>
+                    <input class="form-control" asp-for="Linkedin" placeholder="Input Linkedin">
+                    <span asp-validation-for="Linkedin" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HeaderPhoto"></label>
+                    <input asp-for="HeaderPhoto" class="form-control" placeholder="Input HeaderPhoto">
+                    <span asp-validation-for="HeaderPhoto" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FooterPhoto"></label>
+                    <input asp-for="FooterPhoto" class="form-control" placeholder="Input FooterPhoto">
+                    <span asp-validation-for="FooterPhoto" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

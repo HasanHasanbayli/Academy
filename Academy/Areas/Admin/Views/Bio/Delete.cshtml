@@ -1,0 +1,37 @@
+﻿@model Bio
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <img src="~/images/logo/@Model.HeaderLogo" width="100px" height="100px"/>
+    <img src="~/images/logo/@Model.FooterLogo" width="100px" height="100px"/>
+</div>
+<div class="mt-3">
+    @Model.Location
+</div>
+<div class="mt-3">
+    @Model.About
+</div>
+<div class="mt-3">
+    @Model.Call
+</div>
+<div class="mt-3">
+    @Model.Email
+</div>
+<div class="mt-3">
+    @Model.Facebook
+</div>
+<div class="mt-3">
+    @Model.Twitter
+</div>
+<div class="mt-3">
+    @Model.Linkedin
+</div>
+<div class="row mt-3">
+    <form method="post">
+        <input type="submit" class="btn btn-danger ml-3"<i class="mdi mdi-delete"></i></input>
+        <a class="btn btn-light" asp-action="Index">Cancel</a>
+    </form>
+</div>

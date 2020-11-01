@@ -1,0 +1,60 @@
+﻿@model Courses
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <img src="~/images/courses/@Model.Image" width="600px" height="500px" />
+</div>
+<div>
+    <h3 class="mt-3">Name</h3>
+    @Model.Name
+</div>
+<div>
+    <h3 class="mt-3">Title</h3>
+    @Model.Title
+</div>
+<div>
+    <h3 class="mt-3">Description</h3>
+    @Model.Description
+</div>
+<div>
+    <h3 class="mt-3">Price</h3>
+    @Model.Price
+</div>
+<div>
+    <h3 class="mt-3">About Course</h3>
+    @Model.AboutCourse
+</div>
+<div>
+    <h3 class="mt-3">Skill Level</h3>
+    @Model.SkillLevel
+</div>
+<div>
+    <h3 class="mt-3">Students Count</h3>
+    @Model.StudentsCount
+</div>
+<div>
+    <h3 class="mt-3">Teacher</h3>
+    @Model.Teacher
+</div>
+<div>
+    <h3 class="mt-3">Certification</h3>
+    @Model.Certification
+</div>
+<div>
+    <h3 class="mt-3">Start Time</h3>
+    @Model.StartTime
+</div>
+<div>
+    <h3 class="mt-3">EndTime</h3>
+    @Model.EndTime
+</div>
+<div>
+    <h3 class="mt-3">Duration</h3>
+    @Model.Duration
+</div>
+<div class="row mt-3">
+    <a class="btn btn-dark" asp-action="Index">Go Back</a>
+</div>

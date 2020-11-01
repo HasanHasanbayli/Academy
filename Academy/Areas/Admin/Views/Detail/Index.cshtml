@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Detail>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row mt-3">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Detail</h4>
+                @if (Model.Count() < 3)
+                {
+                    <a asp-controller="Detail" asp-action="Create" class="btn btn-success mt-3">Create Detail</a>
+                }
+                <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Icon Name
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Detail detail in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @detail.Title
+                                    </td>
+                                    <td>
+                                        @detail.Description
+                                    </td>
+                                    <td>
+                                        @detail.Icon
+                                    </td>
+                                    <td>
+                                        <a asp-action="Update" asp-route-id="@detail.Id" class="btn btn-warning">
+                                            <i class="mdi mdi-table-edit"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@detail.Id" class="btn btn-danger">
+                                            <i class="mdi mdi-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿@model Admissions
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Admission</h4>
+            <form class="forms-sample" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label asp-for="Photo"></label>
+                    <input class="form-control" asp-for="Photo" accept="image/*" placeholder="Input Photo">
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input class="form-control" asp-for="Title" placeholder="Input Title">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description" class="form-control" placeholder="Input Description">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Form"></label>
+                    <input asp-for="Form" class="form-control" accept="image/*" placeholder="Input Form">
+                    <span asp-validation-for="Form" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Card"></label>
+                    <input asp-for="Card" class="form-control" accept="image/*" placeholder="Input Card">
+                    <span asp-validation-for="Card" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Transcript"></label>
+                    <input asp-for="Transcript" class="form-control" placeholder="Input Transcript">
+                    <span asp-validation-for="Transcript" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Certificate"></label>
+                    <input asp-for="Certificate" class="form-control" placeholder="Input Certificate">
+                    <span asp-validation-for="Certificate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Picture"></label>
+                    <input asp-for="Picture" class="form-control" placeholder="Input Certificate Details">
+                    <span asp-validation-for="Picture" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

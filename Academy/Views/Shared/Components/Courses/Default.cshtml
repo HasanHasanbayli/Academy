@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Courses>
+@if (ViewContext.RouteData.Values["controller"].ToString() == "Courses")
+{
+    @foreach (Courses courses in Model)
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="course-1-item">
+                <figure class="thumnail">
+                    <a asp-controller="Courses" asp-action="Detail" asp-route-id="@courses.Id"><img src="images/courses/@courses.Image" alt="Image" style="width:350px; height:216px" class="img-fluid"></a>
+                    <div class="price">$@courses.Price</div>
+                    <div class="category"><h3>@courses.Name</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                    <h2>@courses.Title</h2>
+                    <div class="rating2">
+                        @for (int i = 0; i < courses.Star; i++)
+                        {
+                            <input type="radio" name="rating" min="1" max="5">
+                            <label for="5">☆</label>
+                        }
+                    </div>
+                    <style>
+                        .rating2 {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: center;
+                        }
+                         .rating2 > input {
+                                display: none;
+                        }
+                         .rating2 > label {
+                         position: relative;
+                          width: 1em;
+                          font-size: 6vw;
+                          color: #FFD600;
+                          cursor: pointer;
+                          font-size: 25px;
+                         }
+                         .rating2 > label::before {
+                          content: "\2605";
+                          position: absolute;
+                          opacity: 1
+                         }
+                    </style>
+                    <p class="desc mb-4">@courses.Description</p>
+                    <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    @if (ViewContext.RouteData.Values["controller"].ToString() == "Home")
+    {
+        @foreach (Courses courses in Model)
+        {
+            <div class="course-1-item">
+                <figure class="thumnail">
+                    <a asp-controller="Courses" asp-action="Detail" asp-route-id="@courses.Id"><img src="images/courses/@courses.Image"  style="width:350px; height:216px"  alt="Image" class="img-fluid"></a>
+                    <div class="price">$@courses.Price</div>
+                    <div class="category"><h3>@courses.Name</h3></div>
+                </figure>
+                <div class="course-1-content pb-4">
+                    <h2>@courses.Title</h2>
+                    <div class="rating">
+                        @for (int i = 0; i < courses.Star; i++)
+                        {
+                            <input type="radio" name="rating" value="5" id="5">
+                            <label for="5">☆</label>
+                        }
+                    </div>
+                    <style>
+                        .rating {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: center;
+                        }
+
+                            .rating > input {
+                                display: none;
+                            }
+
+                            .rating > label {
+                                position: relative;
+                                width: 1em;
+                                font-size: 6vw;
+                                color: #FFD600;
+                                cursor: pointer;
+                                font-size: 25px;
+                            }
+
+                                .rating > label::before {
+                                    content: "\2605";
+                                    position: absolute;
+                                    opacity: 1
+                                }
+                    </style>
+                    <p class="desc mb-4">@courses.Description</p>
+                    <p><a href="course-single.html" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                </div>
+            </div>
+        }
+    }
+}
+@section Style{
+
+}

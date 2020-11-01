@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Apply>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row mt-3">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Apply</h4>
+                <a asp-controller="Apply" asp-action="ArchivedList" class="btn btn-success mt-3">Archiv List</a>
+                <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    First Name
+                                </th>
+                                <th>
+                                    Last Name
+                                </th>
+                                <th>
+                                    Email Adress
+                                </th>
+                                <th>
+                                    Tel Number
+                                </th>
+                                <th>
+                                    Message
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Apply apply in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @apply.FirstName
+                                    </td>
+                                    <td>
+                                        @apply.LastName
+                                    </td>
+                                    <td>
+                                        @apply.EmailAddress
+                                    </td>
+                                    <td>
+                                        @apply.TelNumber
+                                    </td>
+                                    <td>
+                                        <textarea style="width:400px; height:50px; border:none; background-color:azure"> @apply.Message</textarea>
+                                    </td>
+                                    <td>
+                                        <a asp-action="IsArchived" asp-route-id="@apply.Id" class="btn btn-primary">
+                                            <i class="mdi mdi-archive"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@apply.Id" class="btn btn-danger">
+                                            <i class="mdi mdi-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

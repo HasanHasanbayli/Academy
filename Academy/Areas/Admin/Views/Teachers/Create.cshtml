@@ -1,0 +1,37 @@
+﻿@model Teacher
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Slider</h4>
+            <form class="forms-sample" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label asp-for="Photo"></label>
+                    <input class="form-control" asp-for="Photo" placeholder="Input Title">
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FullName"></label>
+                    <input class="form-control" asp-for="FullName" placeholder="Input Title">
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Position"></label>
+                    <input asp-for="Position" class="form-control" accept="image/*" placeholder="Input Photo">
+                    <span asp-validation-for="Position" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="About"></label>
+                    <input asp-for="About" class="form-control" accept="image/*" placeholder="Input Photo">
+                    <span asp-validation-for="About" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
