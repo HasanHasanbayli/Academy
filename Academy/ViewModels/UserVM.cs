@@ -13,5 +13,7 @@ namespace Academy.ViewModels
         public string Email { get; set; }
         public string Role { get; set; }
         public bool IsActivated { get; set; }
+        public List<string> Roles { get; set; }
+        public bool IsArchived { get; set; }
     }
 }

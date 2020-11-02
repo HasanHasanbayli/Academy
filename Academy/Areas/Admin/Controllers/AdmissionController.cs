@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Academy.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles ="Admin")]
+    //[Authorize(Roles ="Admin")]
     public class AdmissionController : Controller
     {
         private readonly AppDbContext _db;

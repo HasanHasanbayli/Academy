@@ -177,10 +177,6 @@ C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\R
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\News\Index.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\News\Detail.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\Home\Detail.cshtml.g.cs
-C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Apply\Index.cshtml.g.cs
-C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Apply\ArchivedList.cshtml.g.cs
-C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Apply\Delete.cshtml.g.cs
-C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Apply\Message.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonials\Index.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonials\Create.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonials\Update.cshtml.g.cs
@@ -218,7 +214,6 @@ C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\A
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Academy.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Create.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Thanks.cshtml.g.cs
-C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Bio\Create.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Bio\Delete.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\AllNews\Index.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Views\AllVideos\Index.cshtml.g.cs
@@ -445,3 +440,9 @@ C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Delete.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Index.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Message.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\ArchivedList.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Delete.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Index.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Message.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\ChangeRole.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\ChangePassword.cshtml.g.cs

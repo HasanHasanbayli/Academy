@@ -78,6 +78,8 @@
     <Compile Remove="Migrations\20201101181941_AddContactTable.Designer.cs" />
     <Compile Remove="Migrations\20201101190721_CreateDataTable.cs" />
     <Compile Remove="Migrations\20201101190721_CreateDataTable.Designer.cs" />
+    <Compile Remove="Migrations\20201102164621_AddIsArchivedColumnToUserVM.cs" />
+    <Compile Remove="Migrations\20201102164621_AddIsArchivedColumnToUserVM.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

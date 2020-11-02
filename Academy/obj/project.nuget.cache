@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PXvrriR+jaFzncIwiM7de7GTIyDv07mJdfxunEZHCitazeN3sT193ePtbGHIdPdosPkz1a9pnvwmCE6D1LQCpA==",
+  "dgSpecHash": "e5q18BpRJlLg4PaoSHFMjrtq1og4jbaEm4NpZSsbpzUIGquB9+wxe/Y9qOl10tHL1l267TG6pF9djFF5IWRy5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Academy\\Academy\\Academy.csproj",
+  "projectFilePath": "C:\\Users\\Hasan Hasanbayli\\Desktop\\Docs\\Academy\\Academy\\Academy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hasan Hasanbayli\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",
     "C:\\Users\\Hasan Hasanbayli\\.nuget\\packages\\identityserver4.storage\\4.1.1\\identityserver4.storage.4.1.1.nupkg.sha512",
