@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Academy.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
         private readonly AppDbContext _db;
@@ -130,6 +130,16 @@ namespace Academy.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            if (id == null) return NotFound();
+            AppUser user = await _db.Users.FindAsync(id);
+            if (user == null) return NotFound();
+            return View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteUser(string id, AppUser user)
         {
             if (id == null) return NotFound();

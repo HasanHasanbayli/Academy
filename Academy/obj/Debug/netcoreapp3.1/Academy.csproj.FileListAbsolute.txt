@@ -446,3 +446,7 @@ C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\R
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Contact\Message.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\ChangeRole.cshtml.g.cs
 C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\ChangePassword.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\ChangePassword.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\ChangeRole.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\DeleteUser.cshtml.g.cs
+C:\Users\Hasan Hasanbayli\Desktop\Docs\Academy\Academy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\DeleteUser.cshtml.g.cs

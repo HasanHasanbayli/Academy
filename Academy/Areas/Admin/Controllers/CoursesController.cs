@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Academy.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class CoursesController : Controller
     {
         private readonly AppDbContext _db;
